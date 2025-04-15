@@ -1,0 +1,10 @@
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\bin\Debug\CarClassesGUI.exe.config
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\bin\Debug\CarClassesGUI.exe
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\bin\Debug\CarClassesGUI.pdb
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.csproj.AssemblyReference.cache
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.MainDisplay.resources
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.Properties.Resources.resources
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.csproj.GenerateResource.cache
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.csproj.CoreCompileInputs.cache
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.exe
+C:\Users\IvanS_jh8ik0a\Desktop\CodeStuff\CarClassesProject\CarClassesGUI\CarClassesGUI\obj\Debug\CarClassesGUI.pdb
