@@ -47,13 +47,12 @@ namespace CarClassesGUI
             }
         }
 
-        public bool didDriveSafe()
+        public virtual bool didDriveSafe()
         {
             if (fuel > 0)
             {
                 fuel--;// Remove one fuel
-                Random r = new Random();
-                if (r.Next() % 10 == 0) return false;// 10% chance of crashing the car
+                if (getCrashRandom()) return false;// 10% chance of crashing the car
             }
             else
             {// If fuel is less 0 or less then the car crashes
@@ -61,6 +60,32 @@ namespace CarClassesGUI
             }
 
             return true;// If doesn't return early, then everything is fine
+        }
+
+        public virtual bool getCrashRandom()
+        {// Chance for crashing
+            Random r = new Random();
+            return r.Next() % 10 == 0;
+        }
+
+        public virtual void ArrivalFunction(string place)
+        {
+            // Cars don't do things on arrival
+        }
+
+        public virtual string getCrashDescription()
+        {
+            return "crashed and exploded.";
+        }
+
+        public virtual string getPutAwayDescription()
+        {
+            return "was put away.";
+        }
+
+        public virtual string getVehicle()
+        {
+            return " car ";
         }
     }
 }

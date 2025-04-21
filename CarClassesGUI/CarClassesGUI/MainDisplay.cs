@@ -15,6 +15,7 @@ namespace CarClassesGUI
         Car currentCar = null;
         string[] colors = new string[] { "red", "blue", "yellow", "green", "black", "white" };
         int selectedColor;// Color selection
+        int selectedCarType = 0;
 
         string[] placeNames = new string[] { "New Gas Station", "Abandonded Gas Station", "Normal Gas Station", 
             "Hospital", "Park", "House", "Store"};
@@ -46,7 +47,7 @@ namespace CarClassesGUI
             {
                 lbCarDescription.Text += " electric";
             }
-            lbCarDescription.Text += " car has " + currentCar.fuel + " out of " + currentCar.maxFuel + " fuel.";
+            lbCarDescription.Text += currentCar.getVehicle() + "has " + currentCar.fuel + " out of " + currentCar.maxFuel + " fuel.";
 
             // Display all information as a sentence
         }
@@ -59,8 +60,22 @@ namespace CarClassesGUI
             {// If has car already, remove the car
                 RemoveCar(false);
             }
-            currentCar = new Car(tbNameInput.Text, colors[selectedColor], cbIsElectric.Checked);
-            // Make new car
+
+            switch (selectedCarType)
+            {
+                case 0:
+                    currentCar = new Car(tbNameInput.Text, colors[selectedColor], cbIsElectric.Checked);
+                    break;
+                case 1:
+                    Random r = new Random();
+                    currentCar = new Truck(tbNameInput.Text, colors[selectedColor], cbIsElectric.Checked, 
+                        placeNames[r.Next() % placeTypes.Length]);
+                    break;
+                case 2:
+                    currentCar = new Bus(tbNameInput.Text, colors[selectedColor], cbIsElectric.Checked);
+                    break;
+            }
+            // Make new car (based off of which car type is selected)
 
             ResetCarSelection();// Makes car settings back to default
 
@@ -80,14 +95,14 @@ namespace CarClassesGUI
             string log = currentCar.carOwnerName + "'s " + currentCar.carColor;
             if (currentCar.isElectric)
                 log += " electric";
-            log += " car ";
+            log += currentCar.getVehicle();
             if (wasCrashed)
             {
-                log += "crashed and exploded.";
+                log += currentCar.getCrashDescription();
             }
             else
             {
-                log += "was put away.";
+                log += currentCar.getPutAwayDescription();
             }
             lbLogs.Items.Add(log);
             currentCar = null;
@@ -119,6 +134,7 @@ namespace CarClassesGUI
 
             MessageBox.Show(currentCar.carOwnerName + " has arrived at " + placeNames[place]);
             // Say where car has arrived
+            currentCar.ArrivalFunction(placeNames[place]);
 
             if (!currentCar.didDriveSafe())
             {// Check if car drove safely, crash car if didn't
@@ -140,6 +156,24 @@ namespace CarClassesGUI
             }
 
             DisplayDescription();// Update description
+        }
+
+        private void btnCarType_Click(object sender, EventArgs e)
+        {
+            selectedCarType++;
+            selectedCarType %= 3;
+            switch (selectedCarType)
+            {
+                case 0:
+                    btnCarType.Text = "CAR";
+                    break;
+                case 1:
+                    btnCarType.Text = "TRUCK";
+                    break;
+                case 2:
+                    btnCarType.Text = "BUS";
+                    break;
+            }
         }
     }
 }

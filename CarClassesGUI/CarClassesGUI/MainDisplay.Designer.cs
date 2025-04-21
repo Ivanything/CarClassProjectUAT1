@@ -38,13 +38,14 @@ namespace CarClassesGUI
             this.btnRefuel = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.lbLogs = new System.Windows.Forms.ListBox();
+            this.btnCarType = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbNameInput
             // 
             this.tbNameInput.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbNameInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNameInput.Location = new System.Drawing.Point(358, 23);
+            this.tbNameInput.Location = new System.Drawing.Point(357, 23);
             this.tbNameInput.Name = "tbNameInput";
             this.tbNameInput.Size = new System.Drawing.Size(247, 38);
             this.tbNameInput.TabIndex = 0;
@@ -54,7 +55,7 @@ namespace CarClassesGUI
             this.cbIsElectric.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbIsElectric.AutoSize = true;
             this.cbIsElectric.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbIsElectric.Location = new System.Drawing.Point(479, 73);
+            this.cbIsElectric.Location = new System.Drawing.Point(478, 73);
             this.cbIsElectric.Name = "cbIsElectric";
             this.cbIsElectric.Size = new System.Drawing.Size(126, 24);
             this.cbIsElectric.TabIndex = 1;
@@ -66,7 +67,7 @@ namespace CarClassesGUI
             // 
             this.btnCreateCar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCreateCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateCar.Location = new System.Drawing.Point(401, 108);
+            this.btnCreateCar.Location = new System.Drawing.Point(400, 108);
             this.btnCreateCar.Name = "btnCreateCar";
             this.btnCreateCar.Size = new System.Drawing.Size(157, 50);
             this.btnCreateCar.TabIndex = 2;
@@ -79,7 +80,7 @@ namespace CarClassesGUI
             this.lbCarDescription.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbCarDescription.AutoSize = true;
             this.lbCarDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCarDescription.Location = new System.Drawing.Point(326, 174);
+            this.lbCarDescription.Location = new System.Drawing.Point(325, 174);
             this.lbCarDescription.Name = "lbCarDescription";
             this.lbCarDescription.Size = new System.Drawing.Size(317, 17);
             this.lbCarDescription.TabIndex = 3;
@@ -90,7 +91,7 @@ namespace CarClassesGUI
             // 
             this.btnDrive.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDrive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDrive.Location = new System.Drawing.Point(402, 208);
+            this.btnDrive.Location = new System.Drawing.Point(401, 208);
             this.btnDrive.Name = "btnDrive";
             this.btnDrive.Size = new System.Drawing.Size(157, 50);
             this.btnDrive.TabIndex = 4;
@@ -102,7 +103,7 @@ namespace CarClassesGUI
             // 
             this.btnRefuel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnRefuel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefuel.Location = new System.Drawing.Point(402, 264);
+            this.btnRefuel.Location = new System.Drawing.Point(401, 264);
             this.btnRefuel.Name = "btnRefuel";
             this.btnRefuel.Size = new System.Drawing.Size(157, 33);
             this.btnRefuel.TabIndex = 5;
@@ -114,7 +115,7 @@ namespace CarClassesGUI
             // 
             this.btnColor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnColor.Location = new System.Drawing.Point(358, 67);
+            this.btnColor.Location = new System.Drawing.Point(357, 67);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(110, 35);
             this.btnColor.TabIndex = 6;
@@ -128,16 +129,29 @@ namespace CarClassesGUI
             this.lbLogs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogs.FormattingEnabled = true;
             this.lbLogs.ItemHeight = 16;
-            this.lbLogs.Location = new System.Drawing.Point(283, 322);
+            this.lbLogs.Location = new System.Drawing.Point(199, 323);
             this.lbLogs.Name = "lbLogs";
-            this.lbLogs.Size = new System.Drawing.Size(393, 148);
+            this.lbLogs.Size = new System.Drawing.Size(571, 148);
             this.lbLogs.TabIndex = 7;
+            // 
+            // btnCarType
+            // 
+            this.btnCarType.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCarType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarType.Location = new System.Drawing.Point(610, 26);
+            this.btnCarType.Name = "btnCarType";
+            this.btnCarType.Size = new System.Drawing.Size(110, 35);
+            this.btnCarType.TabIndex = 8;
+            this.btnCarType.Text = "CAR";
+            this.btnCarType.UseVisualStyleBackColor = true;
+            this.btnCarType.Click += new System.EventHandler(this.btnCarType_Click);
             // 
             // MainDisplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 527);
+            this.ClientSize = new System.Drawing.Size(964, 527);
+            this.Controls.Add(this.btnCarType);
             this.Controls.Add(this.lbLogs);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnRefuel);
@@ -165,6 +179,7 @@ namespace CarClassesGUI
         private System.Windows.Forms.Button btnRefuel;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.ListBox lbLogs;
+        private System.Windows.Forms.Button btnCarType;
     }
 }
 
